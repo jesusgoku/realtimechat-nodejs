@@ -1,7 +1,7 @@
 window.onload = function() {
  
     var messages = [];
-    var socket = io.connect('http://limitless-lowlands-6815.herokuapp.com');
+    var socket = io.connect('http://' + document.location.host );
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
