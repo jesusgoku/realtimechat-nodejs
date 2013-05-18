@@ -25,3 +25,10 @@ html
 						.input-append(style='width: 98%;')
 							input#field(type='text', placeholder='Message...', style='width: 80%;')
 							button.btn.btn-success#send(type='button', style='width: 18%;')='Send'
+						form.form-inline
+							button.btn.btn-info.btn-mini#notification(type='buttton')='Activar notificacaciones'
+							label.checkbox
+								input#notification-sound-toggle(type='checkbox', checked='checked')
+								| Notification sound
+		audio#notification-sound(preload='auto')
+			source(src='/sound/sounds-949-you-wouldnt-believe.mp3', type='audio/mpeg')
