@@ -14,7 +14,7 @@ app.configure('development', function () {
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function (res, res) {
+app.get('/realtimechat/', function (res, res) {
 	// -- With raw
 	// res.send('It works!');
 	// -- With Jade Engine
@@ -28,8 +28,8 @@ var io = require('socket.io').listen( app.listen(port) );
 console.log('Listen on port ' + port);
 
 io.configure(function () {
-	io.set("transports", ["xhr-polling"]); 
-	io.set("polling duration", 10); 
+//	io.set("transports", ["xhr-polling"]); 
+//	io.set("polling duration", 10); 
 });
 
 io.sockets.on('connection', function (socket) {
